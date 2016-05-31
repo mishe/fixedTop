@@ -5,14 +5,31 @@
 这个组件支持多块内容的固定展示，也支持，自定义的固定位置的提前量，另外这里没有绑定window.scroll  事件，而是采用了循环检测的方式，采用16ms的间隔；
 
 ## 使用范例
+### 方式1：固定位置
+```javascript
+$('.fixedTop1').fixedTop();
+```
+
+### 方式2：固定位置,并设置zindex
 ```javascript
 $('.fixedTop1').fixedTop({
-    top: 55, //固定位置的提前量
-    zIndex: 1
+    z-index:111
 });
+```
 
-$('.fixedTop2').fixedTop({
-    top: 255,
-    zIndex: 0
+### 方式3：固定位置,设置zindex,设置距离上边界的距离
+```javascript
+$('.fixedTop1').fixedTop({
+    top: 55,
+    z-index:111
+});
+```
+
+### 方式4：固定位置,设置zindex,设置距离上边界的距离，并设置页底距离
+```javascript
+$('.fixedTop1').fixedTop({
+    top: 55,
+    z-index:111，
+    bottom:180
 });
 ```
