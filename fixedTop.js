@@ -4,7 +4,7 @@
             var opt = {
                 top: 0, //距离屏幕的上边距
                 zIndex: 0,
-                bottom:180 //距离滚动页面最尾部距离，取消固定位置
+                bottom:0 //距离滚动页面最尾部距离，取消固定位置
             }
             opt = $.extend(opt, options);
             this.each(function () {
