@@ -3,7 +3,8 @@
         fixedTop: function (options) {
             var opt = {
                 top: 0, //距离屏幕的上边距
-                zIndex: 0
+                zIndex: 0,
+                bottom:180 //距离滚动页面最尾部距离，取消固定位置
             }
             opt = $.extend(opt, options);
             this.each(function () {
@@ -29,7 +30,7 @@
                             'z-index': opt.zIndex
                         });
                         pos = 1;
-                        if (document.documentElement.clientHeight - 180 < selfHeight) {
+                        if (document.documentElement.clientHeight - opt.bottom < selfHeight) {
                             height = $(document).height();
                             if (st + selfHeight + 200 > height) {
                                 $(self).css({
